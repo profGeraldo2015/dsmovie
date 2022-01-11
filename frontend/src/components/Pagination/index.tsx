@@ -14,6 +14,9 @@ return(
             <Arrow className="dsmovie-flip-horizontal" />
         </button>
     </div>
+    <div>
+    	
+    </div>
 </div>
 
 	)
