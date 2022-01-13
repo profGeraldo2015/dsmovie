@@ -20,6 +20,7 @@ public class ScoreController {
 	@PutMapping
 	public MovieDTO saveScore(@RequestBody ScoreDTO dto) {
 		MovieDTO movieDTO = service.saveScore(dto);
+		System.out.println("passei aqui depois de gravar");
 		return movieDTO;
 	}
 }
