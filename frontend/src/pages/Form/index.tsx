@@ -1,8 +1,13 @@
 import './style.css';
 import { Link } from "react-router-dom";
+import { Movie } from 'types/movie';
 
 function Form(){
 
+
+type Props = {
+	movie : Movie;
+}
 const movie = {
     id: 1,
     image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/nvxrQQspxmSblCYDtvDAbVFX8Jt.jpg",
