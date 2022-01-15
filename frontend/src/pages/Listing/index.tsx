@@ -34,17 +34,15 @@ function Listing(){
 		})
 
 	}, [pageNumber] );
-const movie = {
-    id: 1,
-    image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/nvxrQQspxmSblCYDtvDAbVFX8Jt.jpg",
-    title: "Não olhe para cima",
-    count: 2,
-    score: 4.5
-};
+
+	const handlePageChange = (newNumber: number) => {
+    	setPageNumber(newNumber);
+	}
+
 	return(
 		<>
 		
-		<Pagination />
+		<Pagination page= {page} onChange={handlePageChange}/>
 
 		<div className="container">
 			
