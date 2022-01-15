@@ -16,8 +16,6 @@ function FormCard( { movieId } : Props ){
 
 	const navigate = useNavigate();
 
-
-
     const [movie, setMovie] = useState<Movie>();
 
     useEffect(()=>{
@@ -31,15 +29,15 @@ function FormCard( { movieId } : Props ){
 
 		event.preventDefault();
 		
-		console.log('aqui');
+		//console.log('aqui');
 
 		const email = (event.target as any ).email.value;
 		const score = (event.target as any ).score.value;
 		
-		console.log(email, score);
+		//console.log(email, score);
 
 		if(!validateEmail(email)){
-			console.log('passei aqui email');
+			//console.log('passei aqui email');
 			return;
 		}//const email = (event.target as any ).email.value;
 
@@ -55,7 +53,7 @@ function FormCard( { movieId } : Props ){
 		}
 
 		axios(config).then(response=>{
-			console.log(response.data);
+			//console.log(response.data);
 			navigate("/");
 
 		});
@@ -82,9 +80,7 @@ function FormCard( { movieId } : Props ){
 						</select>
 					</div>
 					<div className="dsmovie-form-btn-container">
-						<Link to="/">
-							<button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
-						</Link>
+						<button type="submit" className="btn btn-primary dsmovie-btn">Salvar</button>
 					</div>
 				</form>
 				<Link to="/">
